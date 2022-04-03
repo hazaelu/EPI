@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  background: #c1bdba;
+  background: rgba(47, 51, 55, 1.0);
   font-family: "Titillium Web", sans-serif;
 }
 
@@ -28,7 +28,7 @@ a:hover {
   max-width: 600px;
   margin: 40px auto;
   border-radius: 4px;
-  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  box-shadow: 0 4px 10px 4px #08c8d4;
 }
 
 .tab-group {
@@ -172,4 +172,7 @@ textarea {
 .forgot {
   margin-top: -20px;
   text-align: right;
+}
+img {
+  width: 100%;
 }
