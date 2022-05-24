@@ -21,20 +21,20 @@
         <div id="login">   
             <h1>Bienvenido!</h1>
             
-            <form action="/" method="post">
+            <form action="/" action="../../controlador/validar_usuario.php"  method="post">
             
               <div class="field-wrap">
                 <label>
                   Correo Electrónico<span class="req">*</span>
                 </label>
-                <input type="email"required autocomplete="off"/>
+                <input type="email" name="correo" required autocomplete="off"/>
               </div>
               
               <div class="field-wrap">
                 <label>
                   Contraseña<span class="req">*</span>
                 </label>
-                <input type="password"required autocomplete="off"/>
+                <input type="password" name="pass" required autocomplete="off"/>
               </div>
               
               <p class="forgot"><a href="#">Olvide mi Contraseña</a></p>
@@ -45,23 +45,23 @@
 
         </div>
         <div id="signup">   
-            <h1>Registrate Gratis</h1>
+            <h1>Registrate</h1>
             
-            <form action="/" method="post">
+            <form action="/" action="../../controlador/registro.php" method="post">
             
               <div class="top-row">
                 <div class="field-wrap">
                   <label>
                     Nombre<span class="req">*</span>
                   </label>
-                  <input type="text" required autocomplete="off" />
+                  <input type="text" name="nombre" required autocomplete="off" />
                 </div>
           
                 <div class="field-wrap">
                   <label>
                     Apellido<span class="req">*</span>
                   </label>
-                  <input type="text"required autocomplete="off"/>
+                  <input type="text" name="apellido" required autocomplete="off"/>
                 </div>
               </div>
 
@@ -70,7 +70,7 @@
                   <label>
                     Edad<span class="req">*</span>
                   </label>
-                  <input type="text"required autocomplete="off"/>
+                  <input type="text" name="edad" required autocomplete="off"/>
                 </div>
 
                 <div class="field-wrap">
@@ -81,8 +81,8 @@
                     Genero<span class="req">*</span></label>
                     <select id="combo1" class="custom-select" name="genero" required>
                       <option></option>
-                      <option value="1">Masculino</option>
-                      <option value="2">Femenino</option>
+                      <option value="M">Masculino</option>
+                      <option value="F">Femenino</option>
                     </select>
                         </div>
                       </div>
@@ -95,14 +95,14 @@
                   <label>
                     Estatura (Metros)<span class="req">*</span>
                   </label>
-                  <input type="text" required autocomplete="off" />
+                  <input type="text" name="estatura" required autocomplete="off" />
                 </div>
           
                 <div class="field-wrap">
                   <label>
                     Peso (Kg)<span class="req">*</span>
                   </label>
-                  <input type="text"required autocomplete="off"/>
+                  <input type="text" name="peso" required autocomplete="off"/>
                 </div>
               </div>
 
@@ -110,17 +110,32 @@
                 <label>
                 Dirección de Correo Electrónico<span class="req">*</span>
                 </label>
-                <input type="email"required autocomplete="off"/>
+                <input type="email" name="correo" required autocomplete="off"/>
               </div>
             
               <div class="field-wrap">
                 <label>
                 Nueva Contraseña<span class="req">*</span>
                 </label>
-                <input type="password"required autocomplete="off"/>
+                <input type="password" name="pass" required autocomplete="off"/>
               </div>
+              <div class="field-wrap">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-sm-7">
+                    <label>
+                    Nivel<span class="req">*</span></label>
+                    <select id="combo1" class="custom-select" name="nivel" required>
+                      <option></option>
+                      <option value="P">Principiante</option>
+                      <option value="A">Avanzado</option>
+                    </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             
-            <button type="submit" class="button button-block"/>Empezar</button>
+            <button type="submit" name="submit" class="button button-block"/>Empezar</button>
             
             </form>
 

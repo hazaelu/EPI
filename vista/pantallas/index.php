@@ -1,3 +1,16 @@
+<?php session_start(); 
+                    if (isset($_SESSION['k_username'])) { 
+                        //echo '<p><a href="contact.php">Login</a></p>
+                         //<p><a href="orbyt/orbytregistro.html">Registrar</a></p>';
+                      header("Location: ../login/singup-login.html");
+                      die();
+                      }else{
+                        
+                      //echo'<b>'.$_SESSION['k_username'].'</b>.';
+                        //echo '<p><a href="../logout.php">Logout</a></p>';
+                            }
+                            
+                        ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,9 +115,10 @@
                  
                 </li>
                 <li><a href="it_about.html">Acerca de</a></li>
-                <li> <a href="it_service.html">Servicios</a>
+                <li> <a href="#">Bienvenido <?php $_SESSION['k_username']; ?>                
+                      </a>
                   <ul>
-                    <li><a href="it_service_list.html">Hardware</a></li>
+                    <li><a href="it_service_list.html">Actividad</a></li>
                     <li><a href="it_service_detail.html">Reporte</a></li>
                   </ul>
                 </li>
@@ -132,11 +146,11 @@
                     <li><a href="it_checkout.html">Checkout</a></li>
                   </ul>
                 </li> -->
-                <li> <a href="it_contact.html">Contact</a>
-                  <ul>
+                <li> <a href="../../controlador/logout.php">Finalizar</a>
+                  <!--<ul>
                     <li><a href="it_contact.html">Contact Page 1</a></li>
                     <li><a href="it_contact_2.html">Contact Page 2</a></li>
-                  </ul>
+                  </ul>-->
                 </li>
               </ul>
             </div>
