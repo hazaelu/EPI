@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-05-2022 a las 15:09:01
+-- Tiempo de generación: 24-06-2022 a las 15:57:47
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 7.4.27
 
@@ -41,6 +41,22 @@ CREATE TABLE `actividades` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `salud`
+--
+
+CREATE TABLE `salud` (
+  `id` int(11) NOT NULL,
+  `usuarios_id` int(11) NOT NULL,
+  `peso` float(5,2) DEFAULT NULL,
+  `estatura` float(5,2) DEFAULT NULL,
+  `imc` float(5,2) DEFAULT NULL,
+  `pideal` float(5,2) DEFAULT NULL,
+  `rango` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuarios`
 --
 
@@ -68,6 +84,13 @@ ALTER TABLE `actividades`
   ADD KEY `fk_usuarios_id` (`usuarios_id`);
 
 --
+-- Indices de la tabla `salud`
+--
+ALTER TABLE `salud`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fks_usuarios_id` (`usuarios_id`);
+
+--
 -- Indices de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
@@ -81,6 +104,12 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `actividades`
 --
 ALTER TABLE `actividades`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `salud`
+--
+ALTER TABLE `salud`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
@@ -98,6 +127,12 @@ ALTER TABLE `usuarios`
 --
 ALTER TABLE `actividades`
   ADD CONSTRAINT `fk_usuarios_id` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
+
+--
+-- Filtros para la tabla `salud`
+--
+ALTER TABLE `salud`
+  ADD CONSTRAINT `fks_usuarios_id` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
