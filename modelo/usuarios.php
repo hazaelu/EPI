@@ -6,6 +6,11 @@ class usuarios extends grabar{
 	const PASS="*123*456*";
 	const DB="ensayo";
 	const TABLE="usuarios";
+	#const SERVER="database-1.cutvdxplo4yk.us-west-2.rds.amazonaws.com:3306";
+	#const USER="epi";
+	#const PASS="123456789";
+	#const DB="EPI";
+	#const TABLE="usuarios";
 	public function _usuarios_init()
 	{
 		$this->_tablaColumnas['id']=array(
@@ -38,7 +43,7 @@ class usuarios extends grabar{
 														'type'=>'text',
 													     );
 		$this->_tablaColumnas['inscription']=array(
-														'name'=>'registro',
+														'name'=>'inscripcion',
 														'type'=>'text',
 													     );
 		$this->_tablaColumnas['level']=array(

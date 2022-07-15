@@ -2,12 +2,14 @@
                     if (isset($_SESSION['k_username'])) { 
                         //echo '<p><a href="contact.php">Login</a></p>
                          //<p><a href="orbyt/orbytregistro.html">Registrar</a></p>';
-                      header("Location: ../login/singup-login.html");
-                      die();
+                        echo'<b> Bienvenido: '.$_SESSION['k_username'].'</b>.';
+                    
                       }else{
                         
                       //echo'<b>'.$_SESSION['k_username'].'</b>.';
                         //echo '<p><a href="../logout.php">Logout</a></p>';
+                        header("Location: ../../index.html");
+                          #die();
                             }
                             
                         ?>

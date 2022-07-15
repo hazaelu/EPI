@@ -6,6 +6,11 @@ class salud extends grabar{
 	const PASS="*123*456*";
 	const DB="ensayo";
 	const TABLE="salud";
+	#const SERVER="database-1.cutvdxplo4yk.us-west-2.rds.amazonaws.com:3306";
+	#const USER="epi";
+	#const PASS="123456789";
+	#const DB="EPI";
+	#const TABLE="usuarios";
 	public function _salud_init()
 	{
 		$this->_tablaColumnas['id']=array(
